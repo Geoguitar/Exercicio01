@@ -198,16 +198,16 @@ public class frm_VendaAutomovel extends javax.swing.JFrame {
 
 
         // inicializando variaveis
-        float valorBase;
+        float valorBase = 0;
         String marcaAutomovel;
         String anoFabricacao;
+        float valorFinalAutomovel;
         
         //Capturando as variaveis da tela
-        
-        txtValorBaseAutomovel = Float.parseFloat(txtValorBaseAutomovel.getText());
-        marcaAutomovel = cmbMarcaAutomovel.getSelectItem().toString();
+        txtValorBaseAutomovel = String.parseFloat(txtValorBaseAutomovel.getText()); 
+        marcaAutomovel = cmbMarcaAutomovel.getSelectedItem().toString();
         anoFabricacao = txtAnoFabricacao.getText();
-        
+         
         //Instanciar classe
         
         Cls_Calculo obj_Calculo = new Cls_Calculo();
