@@ -198,13 +198,13 @@ public class frm_VendaAutomovel extends javax.swing.JFrame {
 
 
         // inicializando variaveis
-        float valorBase = 0;
+        float valorBase;
         String marcaAutomovel;
         String anoFabricacao;
         float valorFinalAutomovel;
         
         //Capturando as variaveis da tela
-        txtValorBaseAutomovel = String.parseFloat(txtValorBaseAutomovel.getText()); 
+        valorBase = Float.parseFloat(txtValorBaseAutomovel.getText()); 
         marcaAutomovel = cmbMarcaAutomovel.getSelectedItem().toString();
         anoFabricacao = txtAnoFabricacao.getText();
          
@@ -220,6 +220,7 @@ public class frm_VendaAutomovel extends javax.swing.JFrame {
         //Exibir os dados
         
         txtValorFinalAutomovel.setText(String.valueOf(valorFinalAutomovel));
+        txtMensagem.setText("Prezado "+txtNomeCliente.getText()+" o valor do seu automóvel será de R$"+String.valueOf(valorFinalAutomovel));
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void cmbMarcaAutomovelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMarcaAutomovelActionPerformed

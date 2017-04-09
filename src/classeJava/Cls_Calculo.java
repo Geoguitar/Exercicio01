@@ -16,6 +16,7 @@ public class Cls_Calculo {
     private float valorFinalAutomovel;
     
     public float calculo(String MarcaAutomovel, String AnoFabricacao, float valorBase){
+        
     
         switch(MarcaAutomovel){
         
@@ -47,8 +48,9 @@ public class Cls_Calculo {
             break;
         }
         
-        valorDesconto = valorFinalAutomovel * valorPercentualDesconto/100;
-        valorFinalAutomovel = valorFinalAutomovel - valorDesconto;
+        valorDesconto = valorBase * valorPercentualDesconto/100;
+        valorFinalAutomovel = (valorBase - valorDesconto);
         return valorFinalAutomovel;
     }
+
 }
