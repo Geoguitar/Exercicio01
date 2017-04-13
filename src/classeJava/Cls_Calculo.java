@@ -13,37 +13,41 @@ public class Cls_Calculo {
     
     private int valorPercentualDesconto;
     private float valorDesconto;
-    private float valorFinalAutomovel;
-    
-    public float calculo(String MarcaAutomovel, String AnoFabricacao, float valorBase){
+    private float valorFinalAutomovel; 
+   
+    public float calculo(String marcaAutomovel, String anoFabricacao, float valorBase){
         
     
-        switch(MarcaAutomovel){
+        switch(marcaAutomovel){
         
             case "FIAT": {
             
-                if(AnoFabricacao == "2011")
+                if("2011".equals(anoFabricacao)){
                     valorPercentualDesconto = 6;
-                else if (AnoFabricacao == "2012")
+                }else if("2012".equals(anoFabricacao)){
                     valorPercentualDesconto = 5;
+                }
             }
             break;
             
              case "VW": {
             
-                if(AnoFabricacao == "2011")
+                if("2011".equals(anoFabricacao)){
                     valorPercentualDesconto = 4;
-                else if (AnoFabricacao == "2012")
+                    
+                }else if ("2012".equals(anoFabricacao)){
                     valorPercentualDesconto = 3;
+                }
             }
             break;
             
               case "FORD": {
             
-                if(AnoFabricacao == "2011")
+                if("2011".equals(anoFabricacao)){
                     valorPercentualDesconto = 2;
-                else if (AnoFabricacao == "2012")
+                }else if ("2012".equals(anoFabricacao)){
                     valorPercentualDesconto = 1;
+                }
             }
             break;
         }
